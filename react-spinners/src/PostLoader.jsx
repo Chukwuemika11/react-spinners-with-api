@@ -6,7 +6,7 @@ const PostLoader = () => {
   const { data, error, isLoading} = useQuery({
     queryKey: ['post'],
     queryFn: async () => {
-      const response = await fetch('https://sonplaceholder.typicode.com/posts/1');
+      const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
